@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calendar Project</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="app-layout">
+    
+    <!-- Sidebar / Mini Calendar -->
+    <aside class="sidebar">
+      <h1 class="logo">My Calendar</h1>
+      <div class="mini-calendar">
+        <div class="calendar-header">
+          <button id="prevMonth">‹</button>
+          <h2 id="monthYear"></h2>
+          <button id="nextMonth">›</button>
+        </div>
+        <table class="calendar-grid">
+          <thead>
+            <tr>
+              <th>Su</th><th>Mo</th><th>Tu</th>
+              <th>We</th><th>Th</th><th>Fr</th><th>Sa</th>
+            </tr>
+          </thead>
+          <tbody id="calendarBody"></tbody>
+        </table>
+      </div>
+    </aside>
+
+    <!-- Main Week View -->
+    <main class="main-view">
+      <header class="topbar">
+        <h2>Week View</h2>
+        <button id="myButton">Log In</button>
+      </header>
+
+      <section class="event-grid">
+        <div class="time-column">
+          <!-- Times will be generated dynamically -->
+        </div>
+        <div class="day-columns">
+          <div class="day">Sunday</div>
+          <div class="day">Monday</div>
+          <div class="day">Tuesday</div>
+          <div class="day">Wednesday</div>
+          <div class="day">Thursday</div>
+          <div class="day">Friday</div>
+          <div class="day">Saturday</div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+  <!-- ===== LOGIN MODAL ===== -->
+<div id="loginModal" class="modal hidden">
+  <div class="modal-content">
+    <span id="closeModal" class="close">&times;</span>
+    <h2>Log In</h2>
+    <form id="loginForm">
+      <label for="username">Username</label>
+      <input type="text" id="username" required />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" required />
+
+      <button type="submit">Log In</button>
+    </form>
+  </div>
+</div>
+</body>
+</html>
